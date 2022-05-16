@@ -53,3 +53,25 @@ def pil_to_numpy(inputPath):
 
 ########################################
 # Conduct a band math operation using the Blue and Green NumPy arrays.
+
+# # Check the threshold
+#
+# if threshold > numpy.max(arr):
+#     print("Threshold is greater than the maximum of the array")
+#     return False, None
+# else:
+#     outarr = arr > threshold  # a band math operation here!  The result is a boolean array of the type "ndarray"
+#
+# # Convert Array to raster (keep the origin and cellsize the same as the input)
+# try:
+#     print("Writing to ")
+#     if imagefile[-4] != '.':  # Checking if the image doesn't have an extension
+#         outfile = imagefile + 'thresh'  # add string to the end of the original name if no extension
+#     else:
+#         outfile = imagefile[:-4] + "thresh" + imagefile[-4:]  # add string before the extension if present
+#     print(outfile)
+#
+#    
+# except:
+#     print("Problem writing file")
+#     return False, None
