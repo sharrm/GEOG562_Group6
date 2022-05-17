@@ -1,6 +1,7 @@
 from arcpy.sa import *
 from arcpy import env
 import arcpy
+import os
 
 # arcpy workspace
 env.workspace = r'R:\GEOG562\Students\sharrm\Lab7\Lab7_ArcProject\Group6_Lab7.gdb'
@@ -93,7 +94,7 @@ print(meanAndYear)
 meanAndYear = [str(x) for x in meanAndYear]
 
 #make variable as output textfile and write to that textfile using a for loop
-outfilename = 'lab7textfile.txt'
+outfilename = os.path.join(os.path.dirname(env.workspace), 'lab7textfile.txt')
 
 output_file = open(outfilename, 'w')
 
