@@ -79,3 +79,27 @@ for dataset in datasetList:
              tableOfMeans.append(row)
 
 print(tableOfMeans)
+
+#create blank list and use for loop to grab just year and mean, append them to the blank list
+meanAndYear = []
+for i in tableOfMeans:
+    meanAndYear.append(i[1])
+    meanAndYear.append(i[4])
+
+print(meanAndYear)
+
+#make values in meanAndYear list str
+meanAndYear = [str(x) for x in meanAndYear]
+
+#make variable as output textfile and write to that textfile using a for loop
+outfilename = 'lab7textfile.txt'
+
+output_file = open(outfilename, 'w')
+
+for values in meanAndYear:
+    output_file.write(values + "\n")
+
+#close textfile and make a print statement saying where the file is.
+output_file.close()
+
+print(f'The file can be found at {outfilename}')
