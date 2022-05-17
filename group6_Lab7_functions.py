@@ -1,5 +1,6 @@
 from arcpy.sa import *
 from arcpy import env
+import arcpy
 
 # arcpy workspace
 env.workspace = r'R:\GEOG562\Students\sharrm\Lab7\Lab7_ArcProject\Group6_Lab7.gdb'
